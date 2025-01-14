@@ -1,0 +1,147 @@
+.landing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin: 2rem 0 1.5rem 0;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #3a3a3a;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  /* Paragraph Styles */
+  p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #4a4a4a;
+  }
+  
+  /* Solutions Table Styles */
+  .solutions-table {
+    margin: 2.5rem 0;
+    overflow-x: auto;
+  }
+  
+  .solutions-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1rem;
+    margin: 0 auto;
+  }
+  
+  .solutions-table td {
+    padding: 1.2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .solutions-table td:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  /* CTA Button Styles */
+  .cta-button {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .cta-button:hover {
+    background-color: #0052a3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .landing-page {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .solutions-table td {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .cta-button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .solutions-table {
+      margin: 1.5rem -1rem;
+    }
+  
+    .solutions-table td {
+      padding: 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+  
