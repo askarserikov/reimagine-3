@@ -4,6 +4,7 @@ import '../Chat.css';
 function Chat() {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
+  const [conversationId, setConversationId] = useState(null);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -29,16 +30,26 @@ function Chat() {
     try {
       // Replace with your actual API endpoint
       console.log('Sending message to API:', inputMessage);
+
+      const requestBody = {
+        message: inputMessage,
+        ...(conversationId && { conversation_id: conversationId })
+      };
+
       const response = await fetch('https://h5syb6axy9.execute-api.us-east-1.amazonaws.com/prod/request', {
         method: 'POST',
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: inputMessage }),
+        body: JSON.stringify(requestBody),
       });
 
       const data = await response.json();
+
+      if (data.conversation_id) {
+        setConversationId(data.conversation_id);
+      }
 
       console.log(JSON.stringify(data));
       
