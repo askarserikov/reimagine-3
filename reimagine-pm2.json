@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "reimagine",
+            "script": "npm",
+            "args" : "start"
+        }
+    ]
+}
